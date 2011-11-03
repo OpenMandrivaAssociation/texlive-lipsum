@@ -1,3 +1,9 @@
+# revision 22098
+# category Package
+# catalog-ctan /macros/latex/contrib/lipsum
+# catalog-date 2011-04-15 00:51:19 +0200
+# catalog-license lppl
+# catalog-version v1.2
 Name:		texlive-lipsum
 Version:	v1.2
 Release:	1
@@ -45,6 +51,7 @@ with permission from http://lipsum.com/.
 #- source
 %doc %{_texmfdistdir}/source/latex/lipsum/lipsum.dtx
 %doc %{_texmfdistdir}/source/latex/lipsum/lipsum.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -55,3 +62,5 @@ with permission from http://lipsum.com/.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
