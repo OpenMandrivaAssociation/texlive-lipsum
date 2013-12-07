@@ -6,7 +6,7 @@
 # catalog-version v1.2
 Name:		texlive-lipsum
 Version:	v1.2
-Release:	4
+Release:	5
 Summary:	Easy access to the Lorem Ipsum dummy text
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/lipsum
