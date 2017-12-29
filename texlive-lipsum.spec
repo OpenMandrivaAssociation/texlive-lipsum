@@ -1,12 +1,6 @@
-# revision 22098
-# category Package
-# catalog-ctan /macros/latex/contrib/lipsum
-# catalog-date 2011-04-15 00:51:19 +0200
-# catalog-license lppl
-# catalog-version v1.2
 Name:		texlive-lipsum
-Version:	v1.2
-Release:	10
+Version:	1.3
+Release:	1
 Summary:	Easy access to the Lorem Ipsum dummy text
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/lipsum
@@ -51,17 +45,3 @@ with permission from http://lipsum.com/.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> v1.2-2
-+ Revision: 753314
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> v1.2-1
-+ Revision: 718864
-- texlive-lipsum
-- texlive-lipsum
-- texlive-lipsum
-- texlive-lipsum
-
