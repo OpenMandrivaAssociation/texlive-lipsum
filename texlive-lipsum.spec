@@ -1,6 +1,6 @@
 Name:		texlive-lipsum
 Version:	1.3
-Release:	1
+Release:	2
 Summary:	Easy access to the Lorem Ipsum dummy text
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/lipsum
