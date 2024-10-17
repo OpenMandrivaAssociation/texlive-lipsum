@@ -3,7 +3,7 @@ Version:	60561
 Release:	2
 Summary:	Easy access to the Lorem Ipsum dummy text
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/lipsum
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/lipsum
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/lipsum.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/lipsum.doc.r%{version}.tar.xz
