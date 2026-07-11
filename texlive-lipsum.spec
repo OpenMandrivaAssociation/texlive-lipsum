@@ -1,46 +1,23 @@
-Name:		texlive-lipsum
-Version:	60561
-Release:	2
-Summary:	Easy access to the Lorem Ipsum dummy text
+%global tl_name lipsum
+%global tl_revision 77682
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	2.7
+Release:	%{tl_revision}.1
+Summary:	Easy access to the Lorem Ipsum and other dummy texts
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/lipsum
-License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/lipsum.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/lipsum.doc.r%{version}.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/lipsum.source.r%{version}.tar.xz
+License:	lppl1.3
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/lipsum.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/lipsum.doc.r%{tl_revision}.tar.xz
+Source2:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/lipsum.source.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-This package gives you easy access to the Lorem Ipsum dummy
-text; an option is available to separate the paragraphs of the
-dummy text into TeX-paragraphs. All the paragraphs are taken
-with permission from http://lipsum.com/.
+This package gives you easy access to 150 paragraphs of the Lorem Ipsum
+dummy text provided by https://lipsum.com, plus a growing list of other
+dummy texts in different languages.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/latex/lipsum
-%doc %{_texmfdistdir}/doc/latex/lipsum
-#- source
-%doc %{_texmfdistdir}/source/latex/lipsum
-
-#-----------------------------------------------------------------------
-%prep
-%setup -c -a1 -a2
-%autopatch -p1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
